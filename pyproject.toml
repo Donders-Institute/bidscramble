@@ -38,19 +38,31 @@ merge           = 'bidscramble.merge:main'
 testpaths       = ['tests']
 
 [tool.tox]
-legacy_tox_ini = """
+legacy_tox_ini  = """
 [tox]
 min_version     = 4.0
-envlist         = py310, py311, py312, py313
+envlist         = py310, py311, py312, py313, docs
 
 [testenv]
 extras          = fif
 deps            = pytest
 commands        = pytest
+
+[testenv:docs]
+deps            = sphinx-rtd-theme
+                  myst-parser
+                  sphinx_design
+                  linkchecker
+                  tomli >= 1.1.0 ; python_version < "3.11"
+                  pyspelling
+allowlist_externals = make
+commands        = make -C docs html
+                  linkchecker docs/_build/html/index.html
+                  pyspelling -c docs/.pyspelling.yml
 """
 
 # Ref: https://github.com/codespell-project/codespell#using-a-config-file
 [tool.codespell]
-skip = '.git,*.pdf,*.svg,go.sum'
-check-hidden = true
+skip              = '.git,*.pdf,*.svg,go.sum'
+check-hidden      = true
 ignore-words-list = 'uptodate,mis'

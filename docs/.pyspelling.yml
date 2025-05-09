@@ -30,7 +30,7 @@ matrix:
   - pyspelling.filters.python:
       comments: false
   sources:
-  - bidscramble/cli/*.py
+  - bidscramble/*.py
   hunspell:
     d: en_US
   aspell:

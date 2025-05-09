@@ -17,7 +17,7 @@ Related tools
 
 .. |PyPI version| image:: https://img.shields.io/pypi/v/bidscramble?color=success
    :target: https://pypi.org/project/bidscramble
-   :alt: BIDScoin
+   :alt: BIDScramble
 .. |Python Version| image:: https://img.shields.io/pypi/pyversions/bidscramble.svg
    :alt: Python 3
 .. |GPLv3| image:: https://img.shields.io/badge/License-GPLv3+-blue.svg
