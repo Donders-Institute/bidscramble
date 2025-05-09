@@ -26,8 +26,8 @@ dependencies    = ['pandas',
 fif             = ['mne']
 
 [project.urls]
-homepage        = 'https://github.com/SIESTA-eu/wp15'
-repository      = 'https://github.com/SIESTA-eu/wp15'
+homepage        = 'https://github.com/Donders-Institute/bidscramble'
+repository      = 'https://github.com/Donders-Institute/bidscramble'
 
 [project.scripts]
 scramble        = 'bidscramble.scramble:main'
@@ -47,3 +47,9 @@ extras          = fif
 deps            = pytest
 commands        = pytest
 """
+
+# Ref: https://github.com/codespell-project/codespell#using-a-config-file
+[tool.codespell]
+skip = '.git,*.pdf,*.svg,go.sum'
+check-hidden = true
+ignore-words-list = 'uptodate,mis'

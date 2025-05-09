@@ -1,0 +1,33 @@
+name: Pytests
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - '.github/**'
+      - '**.rst'
+      - '**.md'
+      - 'apptainer.def'
+      - 'Dockerfile'
+      - '.readthedocs.yaml'
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - '.github/**'
+      - '**.rst'
+      - '**.md'
+      - 'apptainer.def'
+      - 'Dockerfile'
+      - '.readthedocs.yaml'
+
+jobs:
+  tests:
+    name: Run pytests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Tests with pytest
+        run: |
+          pip install --upgrade pip
+          pip install .[fif] pytest
+          pytest tests
