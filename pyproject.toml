@@ -7,9 +7,9 @@ name            = 'bidscramble'
 description     = 'Generates scrambled datasets that are organized according to the Brain Imaging Data Structure (BIDS)'
 version         = '0.0.3'
 readme          = 'README.md'
-requires-python = '>= 3.9'
+requires-python = '>= 3.10'
 authors         = [{email = 'm.zwiers@donders.ru.nl'}, {name = 'Marcel Zwiers'}]
-classifiers     = ['Programming Language :: Python :: 3.9',
+classifiers     = ['Programming Language :: Python :: 3.10',
                    'Operating System :: OS Independent',
                    'Intended Audience :: Science/Research']
 dependencies    = ['pandas',
@@ -24,6 +24,7 @@ dependencies    = ['pandas',
 
 [project.optional-dependencies]
 fif             = ['mne']
+dev             = ['bidscramble[fif]', 'tox', 'pytest', 'sphinx-rtd-theme', 'myst-parser', 'sphinx_design']
 
 [project.urls]
 homepage        = 'https://github.com/Donders-Institute/bidscramble'
@@ -40,7 +41,7 @@ testpaths       = ['tests']
 legacy_tox_ini = """
 [tox]
 min_version     = 4.0
-envlist         = py39, py310, py311, py312, py313
+envlist         = py310, py311, py312, py313
 
 [testenv]
 extras          = fif
