@@ -3,9 +3,12 @@ BIDScramble
 
 |BIDS| |GPLv3| |RTD| |Tests|
 
-The BIDScramble tool generates scrambled or pseudo-random BIDS datasets from existing BIDS datasets, while preserving statistical distributions of user-specified variables and preserving user-specified effects of interest. The output data of this tool is not (or at least minimally) traceable and does not contain personal data.
+**BIDScramble** is a powerful tool that generates scrambled or **pseudo-random** `BIDS <https://bids-specification.readthedocs.io>`__ datasets from existing BIDS-structured data. It carefully preserves the statistical distributions of user-specified variables while maintaining the effects of interest, ensuring that the synthetic data remains analytically useful. Crucially, the output contains no or minimal indirect personal data, making it privacy-compliant and untraceable to original subjects.
 
-Having access to pseudo-random datasets allows researchers to interact with the data in detail and develop code to implement and test their pipelines. The pipelines should run on the scrambled data just as it runs on the real input data.
+This tool enables researchers to safely explore, prototype, and **test their analysis pipelines** on realistic yet anonymized data. Since the scrambled datasets retain key statistical properties, pipelines should behave similarly to how they would on real data—accelerating development without compromising privacy.
+
+* Explore the full documentation on `Read the Docs <https://bidscramble.readthedocs.io>`__
+* Access the open-source code on `GitHub <https://github.com/Donders-Institute/bidscramble>`__ (licensed under `GPL-3.0-or-later <https://spdx.org/licenses/GPL-3.0-or-later.html>`__)
 
 Related tools
 -------------
