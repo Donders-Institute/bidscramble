@@ -16,7 +16,7 @@ You can then install the BIDScramble tools using git and pip.
 
 .. code-block:: console
 
-   git clone https://github.com/Donders-Institute/bidscramble.git
+   git clone https://github.com/Donders-Institute/BIDScramble.git
    pip install ./BIDScramble           # Or use an alternative installer
    pip install ./BIDScramble[fif]      # Use this if you have fif data
    pip install -e ./BIDScramble[dev]   # Recommended for developers only
