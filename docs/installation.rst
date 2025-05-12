@@ -12,7 +12,15 @@ environment.
    python -m venv venv
    source venv/bin/activate
 
-You can then install the BIDScramble tools using git and pip.
+To install the latest stable BIDScramble version run:
+
+.. code-block:: console
+
+   pip install bidscramble           # Or use an alternative installer
+   pip install bidscramble[fif]      # Use this if you have fif data
+   pip install -e bidscramble[dev]   # Recommended for developers only
+
+Or you can use git (or download the code the code yourself) to install latest development code:
 
 .. code-block:: console
 
