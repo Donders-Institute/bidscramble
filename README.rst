@@ -1,7 +1,12 @@
+===========
 BIDScramble
 ===========
 
-|BIDS| |GPLv3| |RTD| |Tests|
+|PyPI version| |BIDS| |GPLv3| |RTD| |Tests|
+
+.. raw:: html
+
+   <img name="bidscramble-logo" src="https://github.com/Donders-Institute/bidscramble/blob/master/bidscramble/bidscramble_logo.png" height="140px" alt=" ">
 
 **BIDScramble** is a powerful tool that generates scrambled or **pseudo-random** `BIDS <https://bids-specification.readthedocs.io>`__ datasets from existing BIDS-structured data. It carefully preserves the statistical distributions of user-specified variables while maintaining the effects of interest, ensuring that the synthetic data remains analytically useful. Crucially, the output contains no or minimal indirect personal data, making it privacy-compliant and untraceable to original subjects.
 
