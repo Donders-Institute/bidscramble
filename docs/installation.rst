@@ -18,13 +18,12 @@ To install the latest stable BIDScramble version run:
 
    pip install bidscramble           # Or use an alternative installer
    pip install bidscramble[fif]      # Use this if you have fif data
-   pip install -e bidscramble[dev]   # Recommended for developers only
 
 Or you can use git (or download the code the code yourself) to install latest development code:
 
 .. code-block:: console
 
    git clone https://github.com/Donders-Institute/BIDScramble.git
-   pip install ./BIDScramble           # Or use an alternative installer
+   pip install ./BIDScramble
    pip install ./BIDScramble[fif]      # Use this if you have fif data
    pip install -e ./BIDScramble[dev]   # Recommended for developers only
