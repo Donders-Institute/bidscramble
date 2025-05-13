@@ -62,7 +62,7 @@ html_context = {
   'display_github': True,
   'github_repo': 'bidscramble',
   'github_user': 'Donders-Institute',
-  'github_version': 'master',
+  'github_version': 'main',
   'conf_py_path': '/docs/',         # Needs leading and trailing slashes
 }
 
