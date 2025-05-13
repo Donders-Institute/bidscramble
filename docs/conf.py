@@ -74,6 +74,6 @@ html_static_path = ['_static']
 # html_favicon     = "./_static/bidscramble_logo.png"
 html_logo        = "./_static/bidscramble_logo_dark.png"
 html_theme_options = {
-    'logo_only': True,  # Only show logo (no project name)
-    # 'display_version': False,  # Optional: Hide version
+    'logo_only':       True,    # Only show logo (no project name)
+    'display_version': False,   # Optional: Hide version
 }
