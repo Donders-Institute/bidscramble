@@ -1,15 +1,37 @@
 import sys
 import re
 import pandas as pd
+import json
+import urllib.request
 from pathlib import Path
 from importlib import metadata
-from typing import List, Tuple, Set
+from typing import List, Tuple, Set, Union
 from bids_validator import BIDSValidator
 
 __version__     = metadata.version('bidscramble')
 __description__ = metadata.metadata('bidscramble')['Summary']
 __url__         = metadata.metadata('bidscramble')['Project-URL']
 validator       = BIDSValidator()
+
+
+def check_version() -> tuple[str, Union[bool, None], str]:
+    """
+    Compares the BIDScramble version from the local metadata to the remote PyPI repository
+
+    :return:    A `(PyPI version number, up-to-date-boolean, checking message)` tuple
+    """
+
+    # Check PyPI for the latest version number
+    try:
+        stream      = urllib.request.urlopen('https://pypi.org/pypi/bidscramble/json', timeout=5).read()
+        pypiversion = json.loads(stream)['info']['version']
+    except Exception as pypierror:
+        print(pypierror)
+        return '', None, '(Could not check https://pypi.org/pypi/bidscramble for new BIDScramble versions)'
+    if __version__.split('+')[0] != pypiversion:
+        return pypiversion, False, f"NB: Your BIDScramble version is NOT up-to-date: {__version__} -> {pypiversion}"
+    else:
+        return pypiversion, True, 'Your BIDScramble version is up-to-date :-)'
 
 
 def is_bids(filepath: Path):

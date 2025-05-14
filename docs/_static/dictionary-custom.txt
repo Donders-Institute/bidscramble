@@ -5,8 +5,10 @@ DRMAA
 GPL
 Pytest
 MacOS
+PyPI
 Slurm
 Zwiers
+anonymized
 args
 argparse
 bidsvalidate

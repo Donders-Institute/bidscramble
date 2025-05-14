@@ -6,11 +6,11 @@ BIDScramble
 
 .. raw:: html
 
-   <img name="bidscramble-logo" src="https://github.com/Donders-Institute/bidscramble/blob/main/bidscramble/bidscramble_logo.png" height="140px" alt=" ">
+   <img name="bidscramble-logo" src="https://github.com/Donders-Institute/bidscramble/blob/main/docs/_static/bidscramble_logo.png" height="140px" alt=" ">
 
 **BIDScramble** is a powerful tool that generates scrambled or **pseudo-random** `BIDS <https://bids-specification.readthedocs.io>`__ datasets from existing BIDS-structured data. It carefully preserves the statistical distributions of user-specified variables while maintaining the effects of interest, ensuring that the synthetic data remains analytically useful. Crucially, the output contains no or minimal indirect personal data, making it privacy-compliant and untraceable to original subjects.
 
-This tool enables researchers to safely explore, prototype, and **test their analysis pipelines** on realistic yet anonymized data. Since the scrambled datasets retain key statistical properties, pipelines should behave similarly to how they would on real data—accelerating development without compromising privacy.
+This tool enables researchers to safely explore, prototype, and **test their analysis pipelines** on realistic yet anonymized data. Since the scrambled datasets retain key statistical properties, pipelines should behave similarly to how they would on real data — accelerating development without compromising privacy.
 
 * Explore the full documentation on `Read the Docs <https://bidscramble.readthedocs.io>`__
 * Access the open-source code on `GitHub <https://github.com/Donders-Institute/bidscramble>`__ (licensed under `GPL-3.0-or-later <https://spdx.org/licenses/GPL-3.0-or-later.html>`__)

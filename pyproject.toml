@@ -31,6 +31,7 @@ homepage        = 'https://github.com/Donders-Institute/bidscramble'
 repository      = 'https://github.com/Donders-Institute/bidscramble'
 
 [project.scripts]
+bidscramble     = 'bidscramble.bidscramble:main'
 scramble        = 'bidscramble.scramble:main'
 merge           = 'bidscramble.merge:main'
 
