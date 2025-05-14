@@ -1,5 +1,6 @@
+=====
 Merge
-~~~~~
+=====
 
 .. code-block:: console
 
