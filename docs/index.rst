@@ -12,6 +12,5 @@
    :hidden:
    :caption: Usage
 
-   usage
    scramble/index
    merge/merge
