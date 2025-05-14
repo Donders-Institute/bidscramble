@@ -20,6 +20,16 @@ Funding and acknowledgments
 
 BIDScramble is being developed at the `Donders Institute <https://www.ru.nl/donders/>`__ of the `Radboud University <https://www.ru.nl>`__ as part of the `EOSC SIESTA <https://eosc-siesta.eu/>`__ project. Funding was received from the European Union’s Horizon Research and Innovation programme under Grant agreement No. `101131957 <https://cordis.europa.eu/project/id/101131957>`__.
 
+.. image:: https://raw.githubusercontent.com/SIESTA-eu/.github/main/profile/EN-Funded.jpg
+   :height: 40px
+   :alt: EU Funded Logo
+   :target: https://cordis.europa.eu/project/id/101131957
+
+.. image:: https://raw.githubusercontent.com/SIESTA-eu/.github/main/profile/logo.png
+   :height: 40px
+   :alt: EOSC SIESTA
+   :target: https://eosc-siesta.eu/
+
 Related tools
 -------------
 
