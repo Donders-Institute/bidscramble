@@ -1,11 +1,14 @@
 2gb
 BIDScramble
 CLI
+Donders
 DRMAA
+EOSC
 GPL
 Pytest
 MacOS
 PyPI
+Radboud
 Slurm
 Zwiers
 anonymized

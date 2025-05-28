@@ -3,15 +3,28 @@ import re
 import pandas as pd
 import json
 import urllib.request
+import datetime
 from pathlib import Path
 from importlib import metadata
 from typing import List, Tuple, Set, Union
 from bids_validator import BIDSValidator
+validator = BIDSValidator()
 
+# Add metadata
 __version__     = metadata.version('bidscramble')
 __description__ = metadata.metadata('bidscramble')['Summary']
 __url__         = metadata.metadata('bidscramble')['Project-URL']
-validator       = BIDSValidator()
+__license__     = 'GNU General Public License v3.0 or later (GPLv3+)'
+__copyright__   = f"2025-{datetime.date.today().year}, Marcel Zwiers"
+__disclaimer__  = """\
+This module and all modules in this package are part of BIDScramble (https://github.com/Donders-Institute/bidsramble).
+
+BIDScramble is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+BIDScramble is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+"""
 
 
 def check_version() -> tuple[str, Union[bool, None], str]:
