@@ -14,6 +14,7 @@ This tool enables researchers to safely explore, prototype, and **test their ana
 
 * Explore the full documentation on `Read the Docs <https://bidscramble.readthedocs.io>`__
 * Access the open-source code on `GitHub <https://github.com/Donders-Institute/bidscramble>`__ (licensed under `GPL-3.0-or-later <https://spdx.org/licenses/GPL-3.0-or-later.html>`__)
+* BIDScramble is distributed without any warranty. See the `copyright <https://github.com/Donders-Institute/bidscramble/blob/main/COPYRIGHT.rst>`__ for more details.
 
 Funding and acknowledgments
 ---------------------------
