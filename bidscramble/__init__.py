@@ -59,7 +59,7 @@ def is_bids(filepath: Path):
 
 def get_inputfiles(inputdir: Path, select: str, pattern: str='*', bidsvalidate: bool=False) -> Tuple[List[Path], List[Path]]:
     """
-    Recursively get the (modality specific) files from the input directory
+    Recursively get the (modality-specific) files from the input directory
 
     :param inputdir:     The input directory from which files are retrieved using rglob
     :param select:       The fullmatch regular expression pattern to select the files of interest
