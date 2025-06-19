@@ -7,6 +7,7 @@ import time
 import os
 import sys
 import ast
+import re
 from tqdm import tqdm
 from pathlib import Path
 from typing import List
@@ -132,6 +133,45 @@ def scramble_nii(inputdir: str, outputdir: str, select: str, bidsvalidate: bool,
             outputfile.parent.mkdir(parents=True, exist_ok=True)
             outputimg = nib.Nifti1Image(data, inputimg.affine, inputimg.header)
             nib.save(outputimg, outputfile)
+
+    pattern = re2glob(select)
+    print(f"Done! For inspection of the results you can run BIDScoin's `slicereport` app (adapt '{pattern}' if needed):\n\n"
+          f"slicereport {inputdir} {pattern}\n"
+          f"slicereport {outputdir} {pattern} -x {inputdir/'derivatives'/'slicereport'}")
+
+
+def re2glob(regex: str) -> str:
+    """
+    Converts a simple regex pattern (meant for re.fullmatch) to an approximate glob pattern.
+    Only supports basic constructs like .*, ., character classes, and anchors.
+    """
+
+    # Remove negative lookahead (?!\.) which glob can't represent
+    regex = re.sub(r'\(\?!\\\.\)', '', regex)
+    invalid_pat = [r'\(\?[:!=]',    # lookahead, lookbehind, non-capturing group
+                   r'\([^)]+\|',    # alternation
+                   r'\\[dws]',      # shorthand character classes
+                   r'\{[0-9,]+\}',  # explicit quantifiers {n}, {n,}, {n,m}
+                   r'\([^)]+\)']    # general grouping
+    for pat in invalid_pat:
+        if re.search(pat, regex):
+            print(f"WARNING: Regex pattern includes unsupported feature: '{pat}'. Conversion may be incomplete")
+
+    # Strip start/end anchors if present
+    if regex.startswith('^'):
+        regex = regex[1:]
+    if regex.endswith('$'):
+        regex = regex[:-1]
+
+    # Replace basic patterns
+    glob = regex
+    glob = re.sub(r'\\\.', '.', glob)               # escaped '.' to literal '.'
+    glob = re.sub(r'\.\*', '*', glob)               # .* → *
+    glob = re.sub(r'\.', '?', glob)                 # . → ?
+    glob = re.sub(r'\[([^\]]+)\]', r'[\1]', glob)   # character classes [abc] → [abc]
+    glob = re.sub(r'\\(.)', r'\1', glob)            # unescape remaining escaped chars
+
+    return glob
 
 
 def watchjobs(pbatch, jobids: list):
