@@ -2,7 +2,7 @@
 BIDScramble
 ===========
 
-|PyPI version| |BIDS| |GPLv3| |RTD| |Tests|
+|PyPI version| |BIDS| |GPLv3| |RTD| |Tests| |Zenodo|
 
 .. raw:: html
 
@@ -58,3 +58,5 @@ Related tools
 .. |Tests| image:: https://github.com/Donders-Institute/bidscramble/actions/workflows/tests.yml/badge.svg
    :target: https://github.com/Donders-Institute/bidscramble/actions
    :alt: Pytest results
+.. |Zenodo| image:: https://zenodo.org/badge/980550106.svg
+   :target: https://doi.org/10.5281/zenodo.19237187
